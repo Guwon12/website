@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Phần video -->
+            <div class="video-container">
+                <video width="100%" controls>
+                    <source src="{{ movie.video.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Mô tả và thông tin phim -->
+            <div class="movie-info mt-4">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.description }}</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <!-- Thêm phần thông tin hoặc gợi ý khác nếu cần -->
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Danh sách phim</h2>
+    <form method="GET" action="{% url 'home' %}" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Tìm kiếm video..." value="{{ request.GET.q }}">
+            <button class="btn btn-outline-secondary" type="submit">Tìm kiếm</button>
+        </div>
+    </form>
+    <div class="row">
+        {% for movie in page_obj %}
+        <div class="col-md-4 mb-4">
+            <div class="card movie-card">
+                <img src="{{ movie.poster.url }}" class="card-img-top movie-img" alt="{{ movie.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text">{{ movie.description|slice:":100" }}...</p>
+                    <a href="{% url 'movie_detail' movie.id %}" class="btn btn-primary">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
