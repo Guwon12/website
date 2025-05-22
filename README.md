@@ -1,6 +1,7 @@
 
 Django Movie Streaming Website
-Đây là dự án website xem phim được xây dựng bằng Python và Django nhằm mục đích học tập và phát triển kỹ năng lập trình web. Nếu bạn thấy dự án hữu ích, hãy ⭐️ Star để ủng hộ nhé!
+Đây là dự án website xem phim được xây dựng bằng Python và Django nhằm mục đích học tập và phát triển kỹ năng lập trình web. Nếu bạn thấy dự án hữu ích, hãy ⭐️ Star để ủng hộ nhé! 
+
 
 CHỨC NĂNG CHÍNH
 Người quản trị (Admin) có thể:
